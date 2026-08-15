@@ -54,7 +54,6 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
   .faq-item h4{color:#00d26a;margin-bottom:8px}
   .footer{text-align:center;padding:40px 20px;background:#05070f;color:#777;font-size:14px}
   .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#111827;padding:15px;text-align:center;border-top:2px solid #00d26a;z-index:999}
-  .timer{display:inline-block;background:#111827;padding:6px 16px;border-radius:20px;font-size:14px;color:#00d26a;margin-top:15px}
   @media(max-width:600px){.hero h1{font-size:28px}.cta-btn{width:100%}}
 </style>
 </head>
@@ -66,13 +65,12 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
     <div class="logo">🟢 EARN REWARDS</div>
     <h1>Earn Rewards <span>Your Way</span></h1>
     <p>Complete surveys, play games, try apps and explore other offers to earn real rewards.</p>
-    <a href="https://go.orgsite.store/click/1?ns=c%3D6d8fafb8-50c8-4860-813b-029192258b9a..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton">JOIN FREE & START EARNING</a>
+    <a href="https://go.orgsite.store/click/1?ns=c%3Da9dd0294-2342-45e8-a6ca-c2e25bab0463..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton">JOIN FREE & START EARNING</a>
     <div class="trust-badges">
       <div class="badge">✅ Free to Join</div>
       <div class="badge">🔒 Safe & Secure</div>
       <div class="badge">⚡ Instant Rewards</div>
     </div>
-    <div class="timer">⏱️ <span id="timerText">01:17</span> left to claim bonus</div>
   </div>
 </section>
 
@@ -129,7 +127,7 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
     </div>
     
     <div style="text-align:center">
-      <a href="https://go.orgsite.store/click/1?ns=c%3D6d8fafb8-50c8-4860-813b-029192258b9a..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton2">START EARNING NOW</a>
+      <a href="https://go.orgsite.store/click/1?ns=c%3Da9dd0294-2342-45e8-a6ca-c2e25bab0463..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton2">START EARNING NOW</a>
     </div>
   </div>
 </section>
@@ -197,14 +195,14 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
   <div class="container">
     <h2>Ready to Start Earning?</h2>
     <p>Join thousands of members earning rewards in their spare time</p>
-    <a href="https://go.orgsite.store/click/1?ns=c%3D6d8fafb8-50c8-4860-813b-029192258b9a..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton3">JOIN FREE & START EARNING</a>
+    <a href="https://go.orgsite.store/click/1?ns=c%3Da9dd0294-2342-45e8-a6ca-c2e25bab0463..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButton3">JOIN FREE & START EARNING</a>
     <p style="margin-top:15px;font-size:13px;color:#b8c5d6">*Terms and Conditions Apply. This is a survey reward offer.</p>
   </div>
 </section>
 
 <!-- STICKY CTA -->
 <div class="sticky-cta">
-  <a href="https://go.orgsite.store/click/1?ns=c%3D6d8fafb8-50c8-4860-813b-029192258b9a..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButtonSticky">Claim Your Rewards Now</a>
+  <a href="https://go.orgsite.store/click/1?ns=c%3Da9dd0294-2342-45e8-a6ca-c2e25bab0463..l%3D2..a%3D0..b%3D0" class="cta-btn" id="ctaButtonSticky">Claim Your Rewards Now</a>
 </div>
 
 <!-- FOOTER -->
@@ -214,32 +212,9 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
 </div>
 
 <!-- ============================================================ -->
-<!-- SCRIPTS: Timer + Facebook Lead Event                          -->
+<!-- SCRIPTS: Facebook Lead Event                                  -->
 <!-- ============================================================ -->
 <script>
-  // ── Timer (starts at 1:17) ──
-  (function() {
-    let seconds = 77;
-    const timerEl = document.getElementById('timerText');
-    if (!timerEl) return;
-    function pad(n) { return String(n).padStart(2, '0'); }
-    function updateDisplay() {
-      const mins = Math.floor(seconds / 60);
-      const secs = seconds % 60;
-      timerEl.textContent = pad(mins) + ':' + pad(secs);
-    }
-    updateDisplay();
-    const interval = setInterval(function() {
-      if (seconds > 0) {
-        seconds--;
-        updateDisplay();
-      } else {
-        clearInterval(interval);
-      }
-    }, 1000);
-  })();
-
-  // ── Facebook Lead Event on ALL CTA Clicks ──
   document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('#ctaButton, #ctaButton2, #ctaButton3, #ctaButtonSticky');
     buttons.forEach(function(btn) {
@@ -259,7 +234,7 @@ fbq('track', 'ViewContent', {content_name: 'EarnRewards Prelander', content_cate
 </script>
 
 <!-- ============================================================ -->
-<!-- BEMOB LANDING PAGE PIXEL                                      -->
+<!-- BEMOB LANDING PAGE PIXEL (FREECASH UUID)                      -->
 <!-- ============================================================ -->
 <script type="text/javascript">
 function bemobCb(params) {
@@ -274,8 +249,8 @@ function bemobCb(params) {
     }
 }
 </script>
-<script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://go.orgsite.store/landing/6d8fafb8-50c8-4860-813b-029192258b9a?callback=bemobCb&rule=1&path=1&landing=1&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script>
-<noscript><img src="https://go.orgsite.store/landing/6d8fafb8-50c8-4860-813b-029192258b9a?rule=1&path=1&landing=1" alt=""></noscript>
+<script type="text/javascript">!function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://go.orgsite.store/landing/a9dd0294-2342-45e8-a6ca-c2e25bab0463?callback=bemobCb&rule=1&path=1&landing=1&"+window.location.search.substring(1);var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();</script>
+<noscript><img src="https://go.orgsite.store/landing/a9dd0294-2342-45e8-a6ca-c2e25bab0463?rule=1&path=1&landing=1" alt=""></noscript>
 
 </body>
 </html>
